@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function addNumbers(firstNumber,secondNumber) {
+        var returnValue="Addition is ";
+        function add()
+        {
+            return returnValue+(firstNumber+secondNumber);
+        }
+        return add;                                         //Here using add without parenthesis will return complete add method
+                                                            // If I use add(), then it will return the output not method body
+    }
+
+    var myFunc=addNumbers(10,20);                        // Since I am returning the method body, so myFunc will now have add() method body
+    document.write(myFunc+"<br/>")   //OUTPUT --> add() body
+    var result=myFunc();                                  // Calling myFunc will execute add() method, with already given parameters
+    document.write(result)          //OUTPUT --> Addition is 30
+
+
+</script>
+</body>
+</html>

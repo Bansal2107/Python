@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student()
+    {
+        this.firstName="Akash";
+    }
+    var stud=new Student();
+    var stud2=new Student();
+
+    Student.prototype.lastName="Bansal";  // To add new peoperties in our class that will reflect in all other objects
+    Student.prototype.getFullName=function () {
+        return this.firstName+" "+this.lastName;   //"This" is used to refer to the properties of the class
+    }
+
+    document.write(stud.lastName);
+    document.write(stud2.lastName);
+    document.write(stud2.getFullName());
+</script>
+</body>
+</html>

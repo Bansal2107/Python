@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*    In this way,multiple constructors can be created in javaScript
+          You can create a single method with multiple parameters and give argument according to your need.
+    */
+    function Person(firstName,lastName) {
+        this.firstName=firstName;
+        this.lastName=lastName;
+    }
+
+    var person1=new Person();
+    document.write(person1.firstName+" "+person1.lastName+"<br/>");
+
+    var person3=new Person("Akash");
+    document.write(person3.firstName+" "+person3.lastName+"<br/>");
+
+    var person2=new Person("Akash","Bansal");
+    document.write(person2.firstName+" "+person2.lastName);
+
+
+
+
+</script>
+</body>
+</html>

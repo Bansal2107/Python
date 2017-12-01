@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+function validatePassword() {
+    var password=document.getElementById("password").value;
+    var confirmPassword=document.getElementById("confirmPassword").value;
+    if(password!=confirmPassword) {
+        alert("Password doesn't match");
+    }
+}
+
+</script>
+</head>
+<body>
+<h1 align="center">Signup Form</h1>
+<form>
+    <table align="center" style="background-color:gainsboro; font-size: large" >
+        <tr><td>Name</td><td><input type="text" id="name" required pattern="[A-Za-z ]{1,}" placeholder="Akash Bansal" title="Only characters allowed"/></td></tr>
+        <tr><td>Username</td><td><input type="text" id="username" required pattern="[A-Za-z0-9]{8,16}" title="Only char and numbers allowed. length-> 8 to 16"/></td></tr>
+        <tr><td>Password</td><td><input type="password" id="password" required minlength="8" maxlength="20" title="minlength-8 maxlength-16"/></td></tr>
+        <tr><td>Confirm Password</td><td><input type="password" id="confirmPassword" onchange="validatePassword()"/></tr>
+        <tr><td>Date of Birth</td><td><input type="date" id="date"/></td></tr>
+        <tr><td>Gender</td><td><select id="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+        </select></td></tr>
+        <tr><td>Mobile Number</td><td><input type="text" id="mobileNumber"/></td></tr>
+        <tr><td><input type="submit" value="SignUp"/> </td></tr>
+    </table>
+</form>
+
+
+</body>
+</html>

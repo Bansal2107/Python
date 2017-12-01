@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    function addition(a,b)
+    {
+        return a+b;
+    }
+    function getAddition(a,b,add)
+    {
+        return add(a,b);                      //Callback using paramater (Add ---> Addition)
+    }
+    function client() {
+        var a=10;
+        var b=200;
+        var c=getAddition(a,b,addition);       //Calling get Addition method with callback Parameter Addition (function to be called)
+        alert(c);
+    }
+    client();
+</script>
+
+</body>
+</html>

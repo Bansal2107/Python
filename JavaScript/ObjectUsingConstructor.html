@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var Person=new Object();
+
+Person.firstName="Akash";
+Person.lastName="Bansal";
+Person.getFullName= function()
+{
+return this.firstName+" "+this.lastName;
+}
+
+document.write(Person.firstName);
+document.write(Person.lastName);
+document.write(Person.getFullName());
+</script>
+</body>
+</html>
